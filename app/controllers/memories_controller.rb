@@ -21,8 +21,7 @@ class MemoriesController < ApplicationController
   end
 
   def show
-    @comment = Comment.new
-    @comments = @memory.comments.order(created_at: :desc).includes(:user)
+
   end
 
   private

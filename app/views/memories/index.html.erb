@@ -13,7 +13,7 @@
     <ul class='memory-lists'>
       <% @memories.each do |memory| %>
         <li class='list'>
-          <%= link_to "#", method: :get do %>
+          <%= link_to memory_path(memory.id), method: :get do %>
             <div class='memory-nickname-content'>
               <h3 class='nickname'>
                 <%= memory.user.nickname %>
