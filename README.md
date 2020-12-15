@@ -20,7 +20,8 @@
 | Column     | Type       | Options                        |
 | ---------- | ---------- | ------------------------------ |
 | title      | string     | null: false                    |
-| date       | date       | null: false                    |
+| start_date | date       | null: false                    |
+| end_date   | date       | null: false                    |
 | country_id | integer    | null: false                    |
 | place      | string     | null: false                    |
 | text       | text       | null: false                    |
