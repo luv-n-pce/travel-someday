@@ -1,0 +1,62 @@
+<header class='mypage-header'>
+  <div class='back-btn-content'>
+    <%= link_to '<Back', "/", class:"back-btn" %>
+  </div>
+  <div class='header-mypage-nickname'>
+    <h1><%= @nickname %>'s page</h1>
+  </div>
+  <div class='plan-content'>
+    <%# link_to 'my plans>', user_plans_path(@user_id), class:"plan-btn" %>
+  </div>
+</header>
+
+<div class='mypage-contents'>
+  <div class='mypage-lists'>
+    <div class='mypage-my-memories'>
+      <h1>my memories</h1>
+    </div>
+    <% @memories.each do |memory| %>
+    <div class='my-posts'>
+    <%= link_to memory_path(memory.id) do %>
+      <div class='mypage-date-content'>
+        <h3 class='mypage-date'>
+          <%= memory.start_date %> ~ <%= memory.end_date %>
+        </h3>
+      </div>
+      <div class='mypage-title-content'>
+         <h2 class='mypage-title'>
+          <%= memory.title %>
+        </h2>
+      </div>
+      <div class='mypage-text-content'>
+        <h3 class='mypage-text'>
+          <%= memory.text %>
+        </h3>
+      </div>
+      <div class='mypage-img-content'>
+        <%= image_tag memory.image.variant(resize: '700x500'), class: "mypage-img" %>
+      </div>
+      <%# if current_user.already_liked?(memory) %>
+        <%# link_to memory_likes_path(memory), method: :delete do %>
+          <i class="fas fa-heart"></i>
+        <%# end %>
+      <%# else %>
+        <%# link_to memory_likes_path(memory), method: :post do %>
+          <i class="far fa-heart"></i>
+        <%# end %>
+      <%# end %>
+      <%# memory.likes.count %>
+      <% if user_signed_in? && current_user.id == memory.user_id %>
+        <%= link_to(content_tag(:i, nil, class: "fas fa-edit"), edit_memory_path(memory.id), method: :get, class: "edit-btn") %>
+        <%= link_to(content_tag(:i, nil, class: "fas fa-trash-alt"), memory_path(memory.id), method: :delete, class: "delete-btn") %>
+      <% end %>
+    <% end %>
+    </div>
+    <% end %>        
+  </div>
+</div>
+
+<%= link_to new_memory_path, class: 'post-btn' do %>
+  <span class='post-btn-text'>post a memory</span>
+  <%= image_tag 'post-a-memory.png' , size: '180x50' ,class: "post-btn-icon" %>
+<% end %>
