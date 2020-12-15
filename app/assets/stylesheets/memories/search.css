@@ -1,0 +1,88 @@
+.search-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-form2 {
+  box-sizing: border-box;
+  position: relative;
+  border: 1px solid#87CEFA;
+  display: block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  height: 2.3em;
+  width: 260px;
+  overflow: hidden;
+}
+
+.search-input2 {
+  outline: 0;
+  border: none;
+  height: 2.0em;
+  color: pink;
+}
+
+.btn-s-md2 {
+  cursor: pointer;
+  font-family: FontAwesome;
+  font-size: 1.3em;
+  border: none;
+  background-color: white;
+  color: #87CEFA;
+  position: absolute;
+  width: 2.5em;
+  height: 2.5em;
+  right: 0;
+  top: -10px;
+  outline : none;
+}
+
+.search-contents {
+  width: 100%;
+  min-width: 800px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.search-lists{
+  list-style: none;
+  width: 55%;
+}
+
+.search-country-content {
+  color: #808080;
+  
+}
+
+.search-place-content {
+  color: #808080;
+}
+
+.search-date {
+  text-align: right;
+  color: #808080;
+}
+
+.search-nickname {
+  color: #808080;
+}
+.search-title {
+  text-align: center;
+  border-bottom: solid 2px  #87CEFA;
+  color: #808080;
+}
+
+.search-text {
+  color: #808080;
+  white-space: pre-line;
+}
+
+.search-img-content {
+  text-align: center;
+}
+
+.search-img {
+  width: 100%;
+  max-width: 100%;
+}
