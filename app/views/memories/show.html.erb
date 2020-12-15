@@ -45,16 +45,16 @@
       <div class='detail-memory-img-content'>
         <%= image_tag @memory.image.variant(resize: '700x500'), class: "detail-memory-img" %>
       </div> 
-      <%# if current_user.already_liked?(@memory) %>
-        <%# link_to memory_likes_path(@memory), method: :delete do %>
+      <% if current_user.already_liked?(@memory) %>
+        <%= link_to memory_likes_path(@memory), method: :delete do %>
           <i class="fas fa-heart"></i>
-        <%# end %>
-      <%# else %>
-        <%# link_to memory_likes_path(@memory), method: :post do %>
+        <% end %>
+      <% else %>
+        <%= link_to memory_likes_path(@memory), method: :post do %>
           <i class="far fa-heart"></i>
-        <%# end %>
-      <%# end %>
-      <%# @memory.likes.count %>
+        <% end %>
+      <% end %>
+      <%= @memory.likes.count %>
       <% if user_signed_in? && current_user.id == @memory.user_id %>
         <%= link_to(content_tag(:i, nil, class: "fas fa-edit"), edit_memory_path(@memory.id), method: :get, class: "edit-btn") %>
         <%= link_to(content_tag(:i, nil, class: "fas fa-trash-alt"), memory_path(@memory.id), method: :delete, class: "delete-btn") %>
