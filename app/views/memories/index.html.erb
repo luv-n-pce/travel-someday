@@ -1,0 +1,54 @@
+<%= render "shared/header" %>
+<div class='main'>
+
+  <div class='title-contents'>
+    <h2 class='service-title'>
+      All Journeys have secret destinations of which the traveler is unaware.
+    </h2>
+  
+  </div>
+
+  <%# memory一覧 %>
+  <div class='memory-contents'>
+    <ul class='memory-lists'>
+      <% @memories.each do |memory| %>
+        <li class='list'>
+          <%= link_to "#", method: :get do %>
+            <div class='memory-nickname-content'>
+              <h3 class='nickname'>
+                <%= memory.user.nickname %>
+              </h3>
+            </div>
+            <div class='memory-img-content'>
+              <%= image_tag memory.image, class: "memory-img" %>
+            </div>
+            <div class='memory-title-content'>
+              <h3 class='memory-title'>
+                <%= memory.title %>
+              </h3>
+            </div>
+            <% if current_user %>
+              <% if current_user.already_liked?(memory) %>
+                <%= link_to memory_likes_path(memory), method: :delete do %>
+                  <i class="fas fa-heart"></i>
+                <% end %>
+              <% else %>
+                <%= link_to memory_likes_path(memory), method: :post do %>
+                  <i class="far fa-heart"></i>
+                <% end %>
+              <% end %>
+              <%= memory.likes.count %>
+            <% end %>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+
+
+<%= link_to "#", class: 'post-btn' do %>
+  <span class='post-btn-text'>post a memory</span>
+  <%= image_tag 'post-a-memory.png' , size: '180x50' ,class: "post-btn-icon" %>
+<% end %>
