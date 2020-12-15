@@ -1,0 +1,24 @@
+<header class='top-page-header'>
+  <div class='search-bar-contents'>
+    <%= image_tag "logo7.png", class:"travel-someday" %>
+    <%= form_with(url: "#", local: true, method: :get, class: "search-container") do |form| %>
+      <div class='search-form'>
+        <%= form.text_field :keyword, placeholder: "search", class: "search-input" %>
+        <%= button_tag type: "submit", class: "btn btn-default btn-s-md" do %>
+          <i class="fa fa-search"></i>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+  <div class='nav'>
+    <ul class='lists-right'>
+      <% if user_signed_in? %>
+        <li><%= link_to current_user.nickname, "#", class: "user-nickname" %></li>
+        <li><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "logout" %></li>
+      <% else %>
+        <li><%= link_to 'Login', new_user_session_path, class: "login" %></li>
+        <li><%= link_to 'Sign up', new_user_registration_path, class: "sign-up" %></li>
+      <% end %>
+    </ul>
+  </div>
+</header>

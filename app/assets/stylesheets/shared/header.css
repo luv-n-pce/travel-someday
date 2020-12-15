@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+}
+
+.top-page-header {
+  background-color: #F0FFFF;
+  width: 100vw;
+  padding: 2vh 5vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-bar-contents {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.travel-someday {
+  width: 10vw;
+  margin-right: 10vw;
+  margin: auto;
+}
+
+.search_container{
+  box-sizing: border-box;
+  position: relative;
+  border: 1px solid#87CEFA;
+  display: block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  height: 2.3em;
+  width: 260px;
+  overflow: hidden;
+}
+
+.search-form {
+  box-sizing: border-box;
+  position: relative;
+  border: 1px solid#87CEFA;
+  display: block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  height: 2.3em;
+  width: 260px;
+  overflow: hidden;
+}
+
+.search-input {
+  outline: 0;
+  border: none;
+  height: 2.0em;
+  background-color: #F0FFFF;
+  color: pink;
+}
+
+.btn-s-md {
+  cursor: pointer;
+  font-family: FontAwesome;
+  font-size: 1.3em;
+  border: none;
+  background-color: #F0FFFF;
+  color: #87CEFA;
+  position: absolute;
+  width: 2.5em;
+  height: 2.5em;
+  right: 0;
+  top: -10px;
+  outline : none;
+}
+
+.nav {
+  font-size: 16px;
+  width: 100%;
+  padding: 1vh 0;
+}
+
+.lists-right {
+  display: flex;
+  list-style: none;
+  float: right;
+}
+
+
+.user-nickname {
+  text-decoration: none;
+  line-height: 32px;
+  margin-right: 3vw;
+  color: #87CEFA;
+  font-weight: bold;
+}
+
+
+.logout {
+  text-decoration: none;
+  line-height: 32px;
+  color: #87CEFA;
+  font-weight: bold;
+}
+
+.login {
+  text-decoration: none;
+  line-height: 32px;
+  margin-right: 3vw;
+  color:#87CEFA;
+  font-weight: bold;
+}
+
+.sign-up {
+  text-decoration: none;
+  line-height: 32px;
+  color: #87CEFA;
+  font-weight: bold;
+}
