@@ -1,0 +1,73 @@
+.plan-page-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 5px paleturquoise;
+}
+
+.header-detail-plan-place {
+  color: pink;
+}
+
+.plan-edit-btn {
+  color: #87CEFA;
+  font-size: 30px;
+}
+
+.plan-delete-btn {
+  color: #87CEFA;
+  font-size: 30px;
+}
+
+.detail-plan-main {
+  width: 100%;
+  min-width: 800px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.detail-plan-wrap {
+  width: 50%;
+  padding-bottom: 70px;
+}
+
+.detail-plan-group {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.detail-plan-text-wrap {
+  width: 100%;
+  height: 20%;
+}
+
+.plan-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: #87CEFA;
+}
+
+.detail-plan-place-main {
+  width: 100%;
+  height: 20%;
+  display: flex;
+}
+
+.detail-plan-country {
+  color: #808080;
+}
+
+.detail-plan-place {
+  color: #808080;
+}
+
+.detail-plan-place {
+  margin-left: 50px;
+}
+
+.detail-plan-text {
+  white-space: pre-line;
+  color: #808080;
+}

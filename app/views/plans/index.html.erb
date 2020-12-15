@@ -10,10 +10,24 @@
   </div>
 </header>
 
-
-
-
-
+<div class='mypage-main'>
+  <%# memory一覧 %>
+  <div class='plan-contents'>
+    <ul class='plan-lists'>
+      <% @plans.each do |plan| %>
+        <li class='list'>
+        <%= link_to user_plan_path(id: plan.id), method: :get do %>
+          <div class='plan-place-content'>
+            <h3 class='plan-place'>
+              <%= plan.place %>
+            </h3>
+          </div>
+        <% end %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
 
 <%= link_to new_user_plan_path, class: 'plans-post-btn' do %>
   <span class='plans-post-btn-text'>+</span>

@@ -2,7 +2,7 @@ class PlansController < ApplicationController
   before_action :authenticate_user!
 
   def index
-
+    @plans = current_user.plans
   end
 
   def new
@@ -16,6 +16,10 @@ class PlansController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+    @plan = Plan.find(params[:id])
   end
 
   private
