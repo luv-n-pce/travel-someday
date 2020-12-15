@@ -15,4 +15,12 @@ class Memory < ApplicationRecord
     validates :place
     validates :text
   end
+
+  def self.search(search)
+    if search != ""
+      Memory.where('title LIKE(?)', "%#{search}%").or(Memory.where('text LIKE(?)', "%#{search}%")).or(Memory.where('country_id LIKE(?)', "%#{search}%")).or(Memory.where('place LIKE(?)', "%#{search}%"))
+    else
+      Memory.all
+    end
+  end
 end
