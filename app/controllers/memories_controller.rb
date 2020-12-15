@@ -1,6 +1,6 @@
 class MemoriesController < ApplicationController
   before_action :authenticate_user!, except: :index
-  before_action :move_to_index, except: [:index]
+  before_action :move_to_index, except: [:index, :search]
   before_action :set_memory, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -45,6 +45,10 @@ class MemoriesController < ApplicationController
     else
       redirect_to memory_path
     end
+  end
+
+  def search
+    @memories = Memory.search(params[:keyword])
   end
 
   private
