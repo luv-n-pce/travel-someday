@@ -1,7 +1,7 @@
 class MemoriesController < ApplicationController
   before_action :authenticate_user!, except: :index
   before_action :move_to_index, except: [:index]
-  before_action :set_memory, only: [:show, :edit, :update]
+  before_action :set_memory, only: [:show, :edit, :update, :destroy]
 
   def index
     @memories = Memory.order("created_at DESC")
@@ -35,6 +35,15 @@ class MemoriesController < ApplicationController
       redirect_to memory_path
     else
       render :edit
+    end
+  end
+
+  def destroy
+    if @memory.user_id == current_user.id
+      @memory.destroy
+      redirect_to root_path
+    else
+      redirect_to memory_path
     end
   end
 
