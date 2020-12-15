@@ -22,6 +22,22 @@ class PlansController < ApplicationController
     @plan = Plan.find(params[:id])
   end
 
+  def edit
+    @plan = Plan.find(params[:id])
+    unless @plan.user_id == current_user.id
+      redirect_to root_path
+    end
+  end
+
+  def update
+    @plan = Plan.find(params[:id])
+    if @plan.update(plan_params)
+      redirect_to user_plan_path
+    else
+      render :edit
+    end
+  end
+
   private
 
   def plan_params
