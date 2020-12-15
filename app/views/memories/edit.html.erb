@@ -1,0 +1,57 @@
+<%= link_to image_tag("logo7.png", class:"travel-someday"), "/" %>
+
+<%= form_with(model: @memory, class: 'memory-main', local: true) do |f| %>
+
+<div class="memory-form-wrap">
+  <div class="memory-form-header">
+    <h1 class='memory-form-header-text'>Post a memory</h1>
+  </div>
+
+  <%# render 'shared/error_messages', model: f.object %>
+  <div class="memory-form-group">
+    <div class='memory-form-text-wrap'>
+      <label class="memory-form-text">picture</label>
+    </div>
+    <%= f.file_field :image, class:"click-upload", id:"image" %>
+  </div>
+  <div class="memory-form-group">
+    <div class='memory-form-text-wrap'>
+      <label class="memory-form-text">title</label>
+    </div>
+    <%= f.text_field :title, class:"memory-input-default", id:"title", placeholder: "title" %>  
+  </div>
+  <div class="memory-form-group">
+    <div class='memory-form-text-wrap'> 
+      <label class="memory-form-text">start date</label>
+    </div>
+    <%= f.date_field :start_date, class:"memory-input-default", id:"date", placeholder: "ex) 2020/01/01 ~ 2020/01/05" %>
+  </div>
+  <div class="memory-form-group">
+    <div class='memory-form-text-wrap'> 
+      <label class="memory-form-text">end date</label>
+    </div>
+    <%= f.date_field :end_date, class:"memory-input-default", id:"date", placeholder: "ex) 2020/01/01 ~ 2020/01/05" %>
+  </div>
+  <div class="memory-form-group">
+    <div class='memory-form-text-wrap'>
+      <label class="memory-form-text">country</label>
+    </div>
+    <%= f.collection_select(:country_id, Country.all, :id, :name, {}, {class:"select-box", id:"country"}) %>
+  </div>
+  <div class="memory-form-group">
+    <div class='memory-form-text-wrap'> 
+      <label class="memory-form-text">place</label>
+    </div>
+    <%= f.text_field :place, class:"memory-input-default", id:"place", placeholder: "place" %>
+  </div>
+  <div class="memory-form-group">
+    <div class='memory-form-text-wrap'> 
+      <label class="memory-form-text">text</label>
+    </div>
+    <%= f.text_area :text, class:"memory-text-input-default", id:"text", placeholder: "text" %>
+  </div>
+  <div class='register-btn'>
+    <%= f.submit "EDIT" ,class:"submit-btn" %>
+  </div>
+</div>
+<% end %>
