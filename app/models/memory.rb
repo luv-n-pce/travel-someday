@@ -1,7 +1,8 @@
 class Memory < ApplicationRecord
   belongs_to :user
+  has_many :likes, dependent: :destroy
   has_one_attached :image
-  
+
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :country
 
