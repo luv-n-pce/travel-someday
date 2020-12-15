@@ -28,16 +28,16 @@
               </h3>
             </div>
             <% if current_user %>
-              <% if current_user.already_liked?(memory) %>
-                <%= link_to memory_likes_path(memory), method: :delete do %>
+              <%# if current_user.already_liked?(memory) %>
+                <%# link_to memory_likes_path(memory), method: :delete do %>
                   <i class="fas fa-heart"></i>
-                <% end %>
-              <% else %>
-                <%= link_to memory_likes_path(memory), method: :post do %>
+                <%# end %>
+              <%# else %>
+                <%#link_to memory_likes_path(memory), method: :post do %>
                   <i class="far fa-heart"></i>
-                <% end %>
-              <% end %>
-              <%= memory.likes.count %>
+                <%# end %>
+              <%# end %>
+              <%# memory.likes.count %>
             <% end %>
           <% end %>
         </li>
@@ -48,7 +48,7 @@
 
 
 
-<%= link_to "#", class: 'post-btn' do %>
+<%= link_to new_memory_path, class: 'post-btn' do %>
   <span class='post-btn-text'>post a memory</span>
   <%= image_tag 'post-a-memory.png' , size: '180x50' ,class: "post-btn-icon" %>
 <% end %>
