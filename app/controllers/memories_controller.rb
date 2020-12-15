@@ -1,6 +1,7 @@
 class MemoriesController < ApplicationController
   before_action :authenticate_user!, except: :index
   before_action :move_to_index, except: [:index]
+  before_action :set_memory, only: :show
 
   def index
     @memories = Memory.order("created_at DESC")
@@ -19,10 +20,18 @@ class MemoriesController < ApplicationController
     end
   end
 
+  def show
+
+  end
+
   private
 
   def memory_params
     params.require(:memory).permit(:image, :title, :start_date, :end_date, :country_id, :place, :text).merge(user_id: current_user.id)
+  end
+
+  def set_memory
+    @memory = Memory.find(params[:id])
   end
 
   def move_to_index

@@ -1,0 +1,64 @@
+<header class='memory-page-header'>
+  <div class='back-btn-content'>
+    <%= link_to '<Back', "/", class:"back-btn" %>
+  </div>
+  <div class='header-detail-memory-title'>
+    <h1><%= @memory.title %></h1>
+  </div>
+  <div>
+  </div>
+</header>
+
+<div class='detail-memory-contents'>
+  <div class='detail-memory-lists'>
+      <div class='detail-memory-country-content'>
+        <h3 class='detail-country'>
+          <%= @memory.country.name %>
+        </h3>
+      </div>
+      <div class='detail-main'>
+        <div class='detail-memory-date-content'>
+          <h3 class='detail-memory-date'>
+            <%= @memory.start_date %> ~ <%= @memory.end_date %>
+          </h3>
+        </div>
+        <div class='detail-memory-place-content'>
+          <h3 class='detail-place'>
+            <%= @memory.place %>
+          </h3>
+        </div>
+      </div>
+      <div class='detail-memory-nickname-content'>
+        <h3 class='detail-memory-nickname'>
+          <% if current_user.id == @memory.user_id %>
+            <%# link_to @memory.user.nickname, user_path(current_user.id), class: 'detail-nickname' %>'s memory
+          <% else %>
+            <%= @memory.user.nickname %>'s memory
+          <% end %>
+        </h3>
+      </div>
+      <div class='detail-text-content'>
+        <h3 class='detail-text'>
+          <%= @memory.text %>
+        </h3>
+      </div>
+      <div class='detail-memory-img-content'>
+        <%= image_tag @memory.image.variant(resize: '700x500'), class: "detail-memory-img" %>
+      </div> 
+      <%# if current_user.already_liked?(@memory) %>
+        <%# link_to memory_likes_path(@memory), method: :delete do %>
+          <i class="fas fa-heart"></i>
+        <%# end %>
+      <%# else %>
+        <%# link_to memory_likes_path(@memory), method: :post do %>
+          <i class="far fa-heart"></i>
+        <%# end %>
+      <%# end %>
+      <%# @memory.likes.count %>
+      <% if user_signed_in? && current_user.id == @memory.user_id %>
+        <%# link_to(content_tag(:i, nil, class: "fas fa-edit"), edit_memory_path(@memory.id), method: :get, class: "edit-btn") %>
+        <%# link_to(content_tag(:i, nil, class: "fas fa-trash-alt"), memory_path(@memory.id), method: :delete, class: "delete-btn") %>
+      <% end %>       
+    
+  </div>
+</div>
