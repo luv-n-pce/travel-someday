@@ -1,0 +1,63 @@
+.mypage-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 5px paleturquoise;
+}
+
+.header-mypage-nickname {
+  color: pink;
+}
+
+.plan-btn {
+  color: #87CEFA;
+  font-size: 32px;
+}
+
+.mypage-contents {
+  width: 100%;
+  min-width: 800px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.mypage-lists{
+  list-style: none;
+  width: 55%;
+}
+
+.mypage-my-memories {
+  text-align: center;
+  color: #808080;
+}
+
+.my-posts {
+  border: solid 5px  #87CEFA;
+  padding: 40px;
+  margin-bottom: 10px;
+}
+
+.mypage-date {
+  text-align: right;
+  color: #808080;
+}
+
+.mypage-title {
+  text-align: center;
+  border-bottom: solid 2px  #87CEFA;
+  color: #808080;
+}
+
+.mypage-text {
+  color: #808080;
+  white-space: pre-line;
+}
+
+.mypage-img-content {
+  text-align: center;
+}
+
+.mypage-img {
+  width: 100%;
+  max-width: 100%;
+}
