@@ -4,6 +4,7 @@ class User < ApplicationRecord
 
   has_many :memories, dependent: :destroy
   has_many :plans, dependent: :destroy
+  has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
 
   with_options presence: true do
