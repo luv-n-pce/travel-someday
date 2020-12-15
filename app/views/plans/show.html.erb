@@ -1,0 +1,40 @@
+<header class='plan-page-header'>
+  <div class='back-btn-content'>
+    <%= link_to '<Back', user_plans_path, class:"back-btn" %>
+  </div>
+  <div class='header-detail-plan-place'>
+    <h1><%= @plan.place %></h1>
+  </div>
+  <div>
+  <% if user_signed_in? && current_user.id == @plan.user_id %>
+      <%= link_to(content_tag(:i, nil, class: "fas fa-edit"), edit_user_plan_path(@plan.id), method: :get, class: "plan-edit-btn") %>
+      <%= link_to(content_tag(:i, nil, class: "fas fa-trash-alt"), user_plan_path(@plan.id), method: :delete, class: "plan-delete-btn") %>
+  <% end %>
+  </div>
+</header>
+
+<div class='detail-plan-main'>
+  <div class='detail-plan-wrap'>
+    <div class='detail-plan-group'>
+      <div class='detail-plan-text-wrap'>
+        <label class="plan-text">place</label>
+      </div>
+      <div class='detail-plan-place-main'>
+        <h3 class='detail-plan-country'>
+          <%= @plan.country.name %>
+        </h3>
+        <h3 class='detail-plan-place'>
+          <%= @plan.place %>
+        </h3>
+      </div>
+    </div>
+    <div class='detail-plan-group'>
+      <div class='detail-plan-text-wrap'>
+        <label class="plan-text">plan</label>
+      </div>
+      <h3 class='detail-plan-text'>
+        <%= @plan.text %>
+      </h3>
+    </div>  
+  </div>
+</div>

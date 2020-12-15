@@ -3,6 +3,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :memories, dependent: :destroy
+  has_many :plans, dependent: :destroy
 
   with_options presence: true do
     validates :nickname, length: { maximum: 40 }

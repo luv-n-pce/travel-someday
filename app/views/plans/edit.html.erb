@@ -1,0 +1,38 @@
+<header class='plans-header'>
+  <div class='back-btn-content'>
+    <%= link_to '<Back', user_plan_path, class:"back-btn" %>
+  </div>
+  <div class='header-plans-title'>
+    <h1>Make a plan</h1>
+  </div>
+  <div class='#'>
+    <%= link_to '', "#", class:"#" %>
+  </div>
+</header>
+
+<%= form_with(model: @plan, url: user_plan_path, method: :patch, class: 'plan-main', local: true) do |f| %>
+
+<div class="plan-form-wrap">
+  <div class="plan-form-group">
+    <div class='plan-form-text-wrap'>
+      <label class="plan-form-text">country</label>
+    </div>
+    <%= f.collection_select(:country_id, Country.all, :id, :name, {}, {class:"select-box", id:"country"}) %>
+  </div>
+  <div class="plan-form-group">
+    <div class='plan-form-text-wrap'> 
+      <label class="plan-form-text">place</label>
+    </div>
+    <%= f.text_field :place, class:"plan-input-default", id:"place", placeholder: "place" %>
+  </div>
+  <div class="plan-form-group">
+    <div class='plan-form-text-wrap'> 
+      <label class="plan-form-text">text</label>
+    </div>
+    <%= f.text_area :text, class:"plan-text-input-default", id:"text", placeholder: "text (行きたい場所・やりたいこと・食べたいものetc...)" %>
+  </div>
+  <div class='register-btn'>
+    <%= f.submit "EDIT", class:"submit-btn" %>
+  </div>
+</div>
+<% end %>

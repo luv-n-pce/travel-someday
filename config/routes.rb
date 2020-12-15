@@ -3,5 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :memories
 
-  resources :users, only: :show 
+  resources :users, only: :show do
+    resources :plans
+  end
 end
