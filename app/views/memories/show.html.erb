@@ -31,7 +31,7 @@
       <div class='detail-memory-nickname-content'>
         <h3 class='detail-memory-nickname'>
           <% if current_user.id == @memory.user_id %>
-            <%# link_to @memory.user.nickname, user_path(current_user.id), class: 'detail-nickname' %>'s memory
+            <%= link_to @memory.user.nickname, user_path(current_user.id), class: 'detail-nickname' %>'s memory
           <% else %>
             <%= @memory.user.nickname %>'s memory
           <% end %>
@@ -59,6 +59,29 @@
         <%= link_to(content_tag(:i, nil, class: "fas fa-edit"), edit_memory_path(@memory.id), method: :get, class: "edit-btn") %>
         <%= link_to(content_tag(:i, nil, class: "fas fa-trash-alt"), memory_path(@memory.id), method: :delete, class: "delete-btn") %>
       <% end %>       
-    
+    <div class="container">
+      <div class="comments">
+        <h4>☆COMMENTS☆</h4>
+        <% if @comments %>
+          <% @comments.each do |comment| %>
+            <p>
+              <strong><%= comment.user.nickname %>：</strong>
+              <%= comment.text %>
+              <% if user_signed_in? && current_user.id == comment.user_id %>
+                <%= link_to(content_tag(:i, nil, class: "fas fa-trash-alt"), memory_comment_path(@memory, comment), method: :delete, data:{confirm: "削除しますか？"}, class: "delete-btn") %>
+              <% end %>
+            </p>
+          <% end %>
+        <% end %>
+      </div>
+      <% if user_signed_in? %>
+        <%= form_with(model: [@memory, @comment], class: 'comment-form', local: true) do |f| %>
+          <%= f.text_area :text, placeholder: "new comment", class: 'comments-text' %>
+          <div class="send-btn-content">
+            <%= f.submit "SEND", class: 'comment-send-btn' %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
