@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   resources :memories
 
   resources :users, only: :show do
-    resources :plans, only: [:index, :new, :create, :show, :edit, :update]
+    resources :plans
   end
 end
