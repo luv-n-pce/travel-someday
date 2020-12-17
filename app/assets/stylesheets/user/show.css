@@ -15,7 +15,7 @@
 
 .mypage-contents {
   width: 100%;
-  min-width: 800px;
+  min-width: 300px;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -60,4 +60,48 @@
 .mypage-img {
   width: 100%;
   max-width: 100%;
+}
+
+@media (max-width: 599px) {
+  .header-mypage-nickname {
+    color: pink;
+    font-size: 13px;
+  }
+
+  .plan-btn {
+    color: #87CEFA;
+    font-size: 13px;
+  }
+
+  .mypage-lists{
+    list-style: none;
+    width: 80%;
+  }
+
+  .mypage-my-memories {
+    text-align: center;
+    color: #808080;
+    font-size: 13px;
+  }
+
+  .mypage-date {
+    text-align: right;
+    color: #808080;
+    font-size: 13px;
+  }
+
+  .mypage-title {
+    text-align: center;
+    border-bottom: solid 2px  #87CEFA;
+    color: #808080;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .mypage-text {
+    color: #808080;
+    white-space: pre-line;
+    font-size: 13px;
+  }
+
 }

@@ -24,7 +24,7 @@ a {
 }
 
 .service-title {
-  font-size: 8vh;
+  font-size: 3rem;
 }
 
 /* memory一覧 */
@@ -56,7 +56,7 @@ a {
 }
 
 .nickname {
-  font-size: 2.5vh;
+  font-size: 1rem;
 }
 
 .memory-img-content {
@@ -74,5 +74,11 @@ a {
 }
 
 .memory-title {
-  font-size: 2.5vh;
+  font-size: 1rem;
+}
+
+@media (max-width: 599px) {
+  .service-title {
+    font-size: 20px;
+  }
 }

@@ -8,10 +8,6 @@
   color: pink;
 }
 
-.chat-content {
-
-}
-
 .mypage-main {
   background-color: white;
 }
@@ -33,7 +29,8 @@
 }
 
 .plan-lists>.list {
-  width: 30vh;
+  width: 20%;
+  height: 20%;
   padding: 1vw;
   margin-right: 1vw;
   margin-bottom: 1vw;
@@ -42,11 +39,25 @@
   background: linear-gradient(to right, #87CEFA, #32EEFF);
 }
 
-.plan-place-content {
-
-}
-
 .plan-place {
   color: #D7EEFF	;
   text-align: center;
+}
+
+@media (max-width: 599px) {
+  .header-plans-title {
+    color: pink;
+    font-size: 13px;
+  }
+
+  .plan-lists>.list {
+    width: 30%;
+    height: 30%;
+    padding: 1vw;
+    margin-right: 1vw;
+    margin-bottom: 1vw;
+    border-radius: 10%;
+    background: -webkit-linear-gradient(to right, #87CEFA, #32EEFF);
+    background: linear-gradient(to right, #87CEFA, #32EEFF);
+  }
 }

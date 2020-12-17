@@ -1,24 +1,26 @@
 .post-btn {
   width: 120px;
+  height: 120px;
   background: #3ccace;
   text-align: center;
   border-radius: 4%;
   bottom: 32px;
   right: 32px;
   position: fixed;
-  padding: 15px;
+  padding: 10px;
 }
 
 .post-btn-text {
   color: #fff;
   display: block;
-  font-size: 18px;
+  font-size: 17px;
   text-decoration: none;
   margin-bottom: 5px;
 }
 
 .post-btn-icon {
-  width: 60%;
+  width: 50%;
+  height: 50%;
 }
 
 .plans-post-btn {
@@ -37,4 +39,51 @@
   display: block;
   text-decoration: none;
   margin-bottom: 5px;
+}
+
+@media (max-width: 599px) {
+  .post-btn {
+    width: 80px;
+    height: 80px;
+    background: #3ccace;
+    text-align: center;
+    border-radius: 4%;
+    bottom: 5px;
+    right: 5px;
+    position: fixed;
+    padding: 2px;
+  }
+  
+  .post-btn-text {
+    color: #fff;
+    display: block;
+    font-size: 12px;
+    text-decoration: none;
+    margin-bottom: 5px;
+  }
+  
+  .post-btn-icon {
+    width: 40%;
+    height: 40%;
+  }
+  
+  .plans-post-btn {
+    width: 60px;
+    height: 60px;
+    background: #3ccace;
+    text-align: center;
+    bottom: 32px;
+    right: 32px;
+    position: fixed;
+    border-radius: 50%;
+  }
+  
+  .plans-post-btn-text {
+    font-size: 40px;
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    margin-bottom: 5px;
+  }
+
 }
