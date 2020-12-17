@@ -20,7 +20,7 @@
 
 .detail-memory-contents {
   width: 100%;
-  min-width: 800px;
+  min-width: 300px;
   height: 100%;
   background-color: #F0FFFF;
   display: flex;
@@ -126,4 +126,60 @@
 
 .send-btn-content {
   text-align: center;
+}
+
+@media (max-width: 599px) {
+  .memory-page-header {
+    display: flex;
+    justify-content: space-between;
+    height: 10%;
+  }
+
+  .back-btn {
+    color: #87CEFA;
+    font-size: 13px;
+    text-align: left;
+  }
+
+  .header-detail-memory-title {
+    color: pink;
+    height: 10%;
+    font-size: 13px;
+  }
+
+  .detail-memory-lists{
+    list-style: none;
+    width: 80%;
+  }
+
+  .detail-country {
+    color:  #808080;
+    font-size: 13px;
+  }
+  
+  .detail-memory-date {
+    color: #808080;
+    font-size: 13px;
+  }
+  
+  .detail-place {
+    color: #808080;
+    font-size: 13px;
+  }
+  
+  .detail-nickname {
+    color: #808080;
+    font-size: 13px;
+  }
+  
+  .detail-memory-nickname {
+    color: #808080;
+    font-size: 13px;
+  }
+  
+  .detail-text {
+    color: #808080;
+    white-space: pre-line;
+    font-size: 13px;
+  }
 }
