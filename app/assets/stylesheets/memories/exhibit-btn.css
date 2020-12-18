@@ -68,8 +68,7 @@
   }
   
   .plans-post-btn {
-    width: 60px;
-    height: 60px;
+    width: 10ww;
     background: #3ccace;
     text-align: center;
     bottom: 32px;
@@ -79,7 +78,7 @@
   }
   
   .plans-post-btn-text {
-    font-size: 40px;
+    font-size: 25px;
     color: #fff;
     display: block;
     text-decoration: none;

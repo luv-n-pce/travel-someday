@@ -3,7 +3,7 @@
     <%= link_to '<Back', "/", class:"back-btn" %>
   </div>
   <div class='search-form2'>
-    <%= form_with(url: search_memories_path, local: true, method: :get, class: "search-container") do |form| %>
+    <%= form_with(url: search_memories_path, local: true, method: :get, class: "search-container2") do |form| %>
       <%= form.text_field :keyword, placeholder: "search", class: "search-input2" %>
       <%= button_tag type: "submit", class: "btn btn-default btn-s-md2" do %>
         <i class="fa fa-search"></i>
@@ -15,7 +15,7 @@
 <div class="search-contents">
   <div class='search-lists'>
   <% @memories.each do |memory| %>
-  <div class='my-posts'>
+  <div class='search-my-posts'>
     <div class='search-date-content'>
       <h3 class='search-date'>
         <%= memory.start_date %> ~ <%= memory.end_date %>

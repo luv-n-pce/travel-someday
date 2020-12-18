@@ -137,14 +137,14 @@
 
   .back-btn {
     color: #87CEFA;
-    font-size: 13px;
+    font-size: 15px;
     text-align: left;
   }
 
   .header-detail-memory-title {
     color: pink;
     height: 10%;
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .detail-memory-lists{
@@ -181,5 +181,13 @@
     color: #808080;
     white-space: pre-line;
     font-size: 13px;
+  }
+
+  .comments-text {
+    color: pink;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #87CEFA;
+    width: 100%;
   }
 }
