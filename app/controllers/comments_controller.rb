@@ -20,8 +20,6 @@ class CommentsController < ApplicationController
     end
   end
 
-
-
   private
   def set_memory
     @memory = Memory.find(params[:memory_id])

@@ -2,16 +2,12 @@
   <div class='back-btn-content'>
     <%= link_to '<Back', user_plans_path, class:"back-btn" %>
   </div>
-  <div class='header-plans-title'>
+  <div class='header-plans-new-title'>
     <h1>Make a plan</h1>
-  </div>
-  <div class='#'>
-    <%= link_to '', "#", class:"#" %>
   </div>
 </header>
 
 <%= form_with(model: @plan, url: user_plans_path, method: :post, class: 'plan-main', local: true) do |f| %>
-
 <div class="plan-form-wrap">
 <%= render 'shared/error_messages', model: f.object %>
   <div class="plan-form-group">

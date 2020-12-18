@@ -65,12 +65,12 @@
 @media (max-width: 599px) {
   .header-mypage-nickname {
     color: pink;
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .plan-btn {
     color: #87CEFA;
-    font-size: 13px;
+    font-size: 15px;
   }
 
   .mypage-lists{
@@ -81,7 +81,7 @@
   .mypage-my-memories {
     text-align: center;
     color: #808080;
-    font-size: 13px;
+    font-size: 10px;
   }
 
   .mypage-date {
@@ -103,5 +103,4 @@
     white-space: pre-line;
     font-size: 13px;
   }
-
 }

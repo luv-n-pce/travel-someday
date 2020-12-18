@@ -17,14 +17,13 @@
 }
 
 .travel-someday {
-  width: 40%;
+  width: 35%;
   height: 10vh;
   margin-right: 10vw;
-  margin: 0 auto;
 }
 
 .search-container {
-  width: 30%;
+  width: 20%;
 }
 
 .search-form {
@@ -112,11 +111,10 @@
     width: 40%;
     height: 100%;
     margin-right: 10vw;
-    margin: 0 auto;
   }
 
   .search-container {
-    width: 35%;
+    width: 40%;
   }
 
   .search-form {

@@ -1,12 +1,10 @@
-<%= link_to image_tag("logo7.png", class:"travel-someday"), "/" %>
+<%= link_to image_tag("logo7.png", class:"travel-someday2"), "/" %>
 
 <%= form_with(model: @memory, class: 'memory-main', local: true) do |f| %>
-
 <div class="memory-form-wrap">
   <div class="memory-form-header">
-    <h1 class='memory-form-header-text'>Post a memory</h1>
+    <h2 class='memory-form-header-text'>Post a memory</h2>
   </div>
-
   <%= render 'shared/error_messages', model: f.object %>
   <div class="memory-form-group">
     <div class='memory-form-text-wrap'>
