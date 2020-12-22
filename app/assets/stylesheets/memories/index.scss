@@ -9,7 +9,7 @@ a {
 .title-contents {
   width: 100vw;
   height: 100vh;
-  background-image: image-url('logo2.jpeg');
+  background-image: image-url('logo1.webp');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
@@ -24,6 +24,56 @@ a {
 
 .service-title {
   font-size: 3rem;
+  font-family: "Comic Sans MS";
+}
+
+/* How to use部分 */
+.howto-contents {
+  padding: 5vh 15vw;
+  background-color: #F0FFF0;
+}
+
+.howto-title {
+  text-align: center;
+  color:  #808080;
+  font-weight: bold;
+  font-family: "Comic Sans MS";
+  margin-bottom: 5vh;
+  position: relative;
+}
+
+.howto-lists {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.howto-lists>.list {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.howto-list-text {
+  font-weight: bold;
+  font-family: "Comic Sans MS";
+  font-size: 24px;
+  color:  #808080;
+  line-height: 50px;
+  margin: 0;
+}
+
+.howto-list-blue-text {
+  color: #3ccace;
+}
+
+.howto-list-description {
+  font-size: 18px;
+  margin-top: 20px;
+  color:  #808080;
+  font-weight: bold;
 }
 
 /* memory一覧 */
@@ -78,6 +128,36 @@ a {
 
 @media (max-width: 599px) {
   .service-title {
+    font-size: 27px;
+    font-family: "Comic Sans MS";
+  }
+
+  .howto-contents {
+    padding: 5vh 5vw;
+    background-color: #F0FFF0;
+  }
+  
+  .howto-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: "Comic Sans MS";
+    margin-bottom: 5vh;
+    position: relative;
+  }
+  
+  .howto-list-text {
+    font-weight: bold;
+    font-family: "Comic Sans MS";
     font-size: 20px;
+    line-height: 50px;
+    width: 100%;
+    margin: 0;
+  }
+  
+  .howto-list-description {
+    font-size: 16px;
+    font-family: "Comic Sans MS";
+    margin-top: 20px;
   }
 }

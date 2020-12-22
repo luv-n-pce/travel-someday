@@ -7,6 +7,7 @@
   color: #87CEFA;
   font-size: 32px;
   text-align: left;
+  font-family: "Comic Sans MS";
 }
 
 .header-detail-memory-title {
@@ -102,10 +103,12 @@
   margin: 10px 0;
   padding: 20px 0;
   color: #808080;
+  font-family: "Comic Sans MS";
 }
 
 .comments-text {
   color: pink;
+  font-family: "Comic Sans MS";
   font-size: 16px;
   border-radius: 4px;
   border: 1px solid #87CEFA;
@@ -116,6 +119,7 @@
   background-color: #87CEFA;
   border-color: #87CEFA;
   color: white;
+  font-family: "Comic Sans MS";
   box-sizing: border-box;
   border-radius: 2rem;
   padding-left: 1.5rem;

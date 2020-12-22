@@ -1,4 +1,6 @@
-<%= link_to image_tag("logo7.png", class:"travel-someday"), "/" %>
+<div class='back-btn-content'>
+  <%= link_to '<Back', memory_path(@memory.id), method: :get, class:"back-btn" %>
+</div>
 
 <%= form_with(model: @memory, class: 'memory-main', local: true) do |f| %>
 

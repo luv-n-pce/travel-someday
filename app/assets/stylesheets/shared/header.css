@@ -45,6 +45,7 @@
   height: 2.0em;
   background-color: #F0FFFF;
   color: pink;
+  font-family: "Comic Sans MS";
 }
 
 .btn-s-md {
@@ -81,6 +82,7 @@
   margin-right: 3vw;
   color: #87CEFA;
   font-weight: bold;
+  font-family: "Comic Sans MS";
 }
 
 
@@ -89,6 +91,7 @@
   line-height: 32px;
   color: #87CEFA;
   font-weight: bold;
+  font-family: "Comic Sans MS";
 }
 
 .login {
@@ -97,6 +100,7 @@
   margin-right: 3vw;
   color:#87CEFA;
   font-weight: bold;
+  font-family: "Comic Sans MS";
 }
 
 .sign-up {
@@ -104,6 +108,7 @@
   line-height: 32px;
   color: #87CEFA;
   font-weight: bold;
+  font-family: "Comic Sans MS";
 }
 
 @media (max-width: 599px) {

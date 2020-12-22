@@ -1,6 +1,7 @@
 .header-plans-new-title {
   color: pink;
   margin: auto;
+  font-family: "Comic Sans MS";
 }
 
 .plan-main {
@@ -37,6 +38,7 @@
   font-size: 14px;
   font-weight: bold;
   color: #87CEFA;
+  font-family: "Comic Sans MS";
 }
 
 .plan-input-default {
@@ -50,6 +52,7 @@
   color: pink;
   font-size: 16px;
   resize: none;
+  font-family: "Comic Sans MS";
 }
 
 .plan-text-input-default {
