@@ -88,7 +88,7 @@ https://i.gyazo.com/615f19ae8d242cbf994165a2966c9a79.mp4
 
 ### 検索結果一覧画面
 
-https://i.gyazo.com/1d30786ecba3c90c1d7965ce62b1b39d.mp4
+https://i.gyazo.com/1d30786ecba3c90c1d7965ce62b1b39d.mp4  
 https://i.gyazo.com/b77880b76d4fe1b1c75f115ca72fcd6f.mp4
 
 場所などを検索欄に入力すると検索ができ、関連する投稿の一覧を表示することができます。
