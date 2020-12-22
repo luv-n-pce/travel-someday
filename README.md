@@ -13,6 +13,7 @@ URL: https://travel-someday.herokuapp.com/
 ID/Pass
   * ID: admin
   * Pass: 1234
+
 ログイン情報（テスト用）
   * メールアドレス: test@gmail.com
   * パスワード: test123
