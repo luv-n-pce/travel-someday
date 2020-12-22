@@ -19,6 +19,7 @@
   background-color: white;
   padding-bottom: 70px;
   color: pink;
+  font-family: "Comic Sans MS";
 }
 
 .memory-form-header {
@@ -66,6 +67,7 @@
   color: pink;
   font-size: 16px;
   resize: none;
+  font-family: "Comic Sans MS";
 }
 
 .select-box {
@@ -102,6 +104,7 @@
   line-height: 48px;
   font-size: 14px;
   cursor: pointer;
+  font-family: "Comic Sans MS";
 }
 
 @media (max-width: 599px) {

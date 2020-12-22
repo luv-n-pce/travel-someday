@@ -6,11 +6,13 @@
 
 .header-mypage-nickname {
   color: pink;
+  font-family: "Comic Sans MS";
 }
 
 .plan-btn {
   color: #87CEFA;
   font-size: 32px;
+  font-family: "Comic Sans MS";
 }
 
 .mypage-contents {
@@ -29,6 +31,7 @@
 .mypage-my-memories {
   text-align: center;
   color: #808080;
+  font-family: "Comic Sans MS";
 }
 
 .my-posts {

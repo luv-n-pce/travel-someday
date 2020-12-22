@@ -57,7 +57,7 @@
       <%= @memory.likes.count %>
       <% if user_signed_in? && current_user.id == @memory.user_id %>
         <%= link_to(content_tag(:i, nil, class: "fas fa-edit"), edit_memory_path(@memory.id), method: :get, class: "edit-btn") %>
-        <%= link_to(content_tag(:i, nil, class: "fas fa-trash-alt"), memory_path(@memory.id), method: :delete, class: "delete-btn") %>
+        <%= link_to(content_tag(:i, nil, class: "fas fa-trash-alt"), memory_path(@memory.id), method: :delete, data:{confirm: "削除しますか？"}, class: "delete-btn") %>
       <% end %>       
     <div class="container">
       <div class="comments">
