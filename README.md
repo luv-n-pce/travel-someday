@@ -50,9 +50,7 @@ ID/Pass
 
 ### トップページ（画像投稿一覧画面）
 
-<p align="center">
-  <img src="https://i.gyazo.com/d6eab5de100361d9be28a69c36d6458c.mp4" width=70%>  
-</p>　
+https://i.gyazo.com/d6eab5de100361d9be28a69c36d6458c.mp4
 
 トップページでは、ユーザー新規登録・ログイン・ログアウト・マイページ・新規投稿ページへのアクセスができます。また、投稿された画像の一覧を見ることができます。
 
